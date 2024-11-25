@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Lista de Tarefas</h1>
+        <a href="/nova" class="btn btn-primary mb-3">Nova Tarefa</a> <!--botaão nova tarefa --> 
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tarefa in tarefas %}
+                <tr>
+                    <td>{{ tarefa.id }}</td>
+                    <td>{{ tarefa.titulo }}</td>
+                    <td>{{ tarefa.descricao }}</td>
+                    <td>
+                        <a href="/editar/{{ tarefa.id }}" class="btn btn-warning btn-sm">Editar</a>   <!--botaão edição de tarefa --> 
+                        <form action="/excluir/{{ tarefa.id }}" method="post" style="display:inline-block;"> 
+                            <button type="submit" class="btn btn-danger btn-sm">Excluir</button> <!--botão de excluir --> 
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
+
+

@@ -5,7 +5,8 @@ Tecnologias utilizadas no backend:
 python
 framework flask
 
-Frontend
+Frontend:
+
 HTML
 Jinja2
 

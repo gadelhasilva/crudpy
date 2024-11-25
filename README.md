@@ -10,4 +10,9 @@ Frontend:
 HTML
 Jinja2
 
+Gerenciamento de Dependências:
+
+pip
+Virtualenv
+
 Próximo passo: Adicionar Banco de dados
